@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { ShieldCheck } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -73,8 +74,8 @@ export function ProductCard({ product }: ProductCardProps) {
           <span className="font-semibold text-accent">{formatPrice(product.startingPrice)}</span>
         </p>
 
-        <Button className="mt-auto w-full bg-primary hover:bg-green-mid text-primary-foreground">
-          Customize & Order
+        <Button asChild className="mt-auto w-full bg-primary hover:bg-green-mid text-primary-foreground">
+          <Link href="/order">Customize & Order</Link>
         </Button>
 
         {/* Paystack Badge */}
