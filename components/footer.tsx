@@ -5,12 +5,12 @@ import { ArrowRight, Mail, Phone, MapPin } from "lucide-react"
 
 const footerLinks = {
   shop: [
-    { label: "Agbada", href: "#" },
-    { label: "Ankara", href: "#" },
-    { label: "Aso-Oke", href: "#" },
-    { label: "Kaftan", href: "#" },
-    { label: "Iro & Buba", href: "#" },
-    { label: "Babariga", href: "#" },
+    { label: "All Styles", href: "/catalog" },
+    { label: "Agbada", href: "/catalog" },
+    { label: "Ankara", href: "/catalog" },
+    { label: "Aso-Oke", href: "/catalog" },
+    { label: "Kaftan", href: "/catalog" },
+    { label: "Iro & Buba", href: "/catalog" },
   ],
   company: [
     { label: "About Us", href: "#" },

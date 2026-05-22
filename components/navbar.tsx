@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Menu, X, ShoppingBag } from "lucide-react"
 
 const navLinks = [
+  { label: "Shop", href: "/catalog" },
   { label: "Styles", href: "#styles" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Fabrics", href: "#fabrics" },
