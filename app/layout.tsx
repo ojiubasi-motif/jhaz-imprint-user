@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google'
+import { Plus_Jakarta_Sans, Cormorant_Garamond } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
@@ -8,15 +8,16 @@ const plusJakarta = Plus_Jakarta_Sans({
   variable: '--font-plus-jakarta',
 })
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-cormorant',
 })
 
 export const metadata: Metadata = {
-  title: 'Jhaz-Imprints | Premium Nigerian Traditional Attire',
+  title: 'Jhaz Imprints | Elegance Redefined',
   description:
-    'Custom-tailored Nigerian traditional outfits delivered to your door. Browse Agbada, Ankara, Aso-Oke, Kaftan, and more. Wear your culture, your way.',
+    'Premium Nigerian traditional attire, custom-tailored and delivered to your door. Browse Agbada, Ankara, Aso-Oke, Kaftan, and more. Wear your culture with pride.',
   keywords: [
     'Nigerian fashion',
     'traditional attire',
@@ -26,11 +27,13 @@ export const metadata: Metadata = {
     'kaftan',
     'custom tailoring',
     'African fashion',
+    'premium fashion',
+    'made to measure',
   ],
 }
 
 export const viewport = {
-  themeColor: '#1B4332',
+  themeColor: '#B8860B',
 }
 
 export default function RootLayout({
@@ -41,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-background">
       <body
-        className={`${plusJakarta.variable} ${playfair.variable} font-sans antialiased`}
+        className={`${plusJakarta.variable} ${cormorant.variable} font-sans antialiased`}
       >
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

@@ -33,14 +33,14 @@ export function ProductCard({ product }: ProductCardProps) {
   }
 
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-xl bg-card border border-border/50 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-accent/30">
+    <div className="group relative flex flex-col overflow-hidden rounded-xl bg-card border border-border transition-all duration-300 hover:border-primary/30">
       {/* Badge */}
       <div className="absolute top-3 left-3 z-10">
         <Badge
           className={
             product.badge === "Made to Measure"
-              ? "bg-primary text-primary-foreground"
-              : "bg-accent text-accent-foreground"
+              ? "bg-gold-muted text-primary border-0"
+              : "bg-primary text-primary-foreground border-0"
           }
         >
           {product.badge}
@@ -71,18 +71,18 @@ export function ProductCard({ product }: ProductCardProps) {
 
         <p className="text-sm text-muted-foreground">
           Starting from{" "}
-          <span className="font-semibold text-accent">{formatPrice(product.startingPrice)}</span>
+          <span className="font-semibold text-primary">{formatPrice(product.startingPrice)}</span>
         </p>
 
-        <Button asChild className="mt-auto w-full bg-primary hover:bg-green-mid text-primary-foreground">
+        <Button asChild className="mt-auto w-full bg-primary hover:bg-gold-bright text-primary-foreground">
           <Link href="/order">Customize & Order</Link>
         </Button>
 
         {/* Paystack Badge */}
-        <div className="flex items-center justify-center gap-1.5 pt-2 border-t border-border/50">
-          <ShieldCheck className="h-3.5 w-3.5 text-green-light" />
+        <div className="flex items-center justify-center gap-1.5 pt-2 border-t border-border">
+          <ShieldCheck className="h-3.5 w-3.5 text-primary" />
           <span className="text-xs text-muted-foreground">Secured by</span>
-          <span className="text-xs font-semibold text-green-deep">Paystack</span>
+          <span className="text-xs font-semibold text-foreground">Paystack</span>
         </div>
       </div>
     </div>
