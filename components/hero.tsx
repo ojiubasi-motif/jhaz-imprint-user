@@ -1,16 +1,15 @@
-import Link from "next/link"
 import { ArrowRight, Star } from "lucide-react"
 import Image from "next/image"
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden pt-16 lg:pt-20">
-      {/* Background */}
-      <div className="absolute inset-0 bg-background" />
+      {/* Background pattern */}
+      <div className="absolute inset-0 bg-cream" />
       <div
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23B8860B' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231B4332' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}
       />
 
@@ -18,14 +17,14 @@ export function Hero() {
         <div className="grid gap-8 py-16 md:py-20 lg:grid-cols-2 lg:gap-12 lg:py-28 items-center">
           {/* Text Content */}
           <div className="flex flex-col justify-center">
-            <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full bg-gold-muted px-4 py-1.5 text-sm font-medium text-primary">
-              <Star className="h-3.5 w-3.5 fill-primary" />
+            <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full bg-gold/10 px-4 py-1.5 text-sm font-medium text-accent">
+              <Star className="h-3.5 w-3.5 fill-accent" />
               Premium Nigerian Fashion
             </div>
 
-            <h1 className="text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl xl:text-7xl font-serif text-balance">
-              Elegance{" "}
-              <span className="text-primary">Redefined</span>
+            <h1 className="text-4xl font-bold leading-tight tracking-tight text-primary sm:text-5xl lg:text-6xl xl:text-7xl font-[family-name:var(--font-playfair)] text-balance">
+              Wear Your Culture,{" "}
+              <span className="text-accent">Your Way</span>
             </h1>
 
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
@@ -35,19 +34,19 @@ export function Hero() {
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Link
-                href="/order"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-all hover:bg-gold-bright hover:shadow-lg"
+              <a
+                href="#styles"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-all hover:bg-green-mid hover:shadow-xl hover:shadow-primary/20"
               >
                 Order Now
                 <ArrowRight className="h-5 w-5" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="#how-it-works"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-8 py-4 text-base font-semibold text-foreground transition-all hover:border-primary hover:text-primary"
+                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary/20 px-8 py-4 text-base font-semibold text-primary transition-all hover:border-primary/40 hover:bg-primary/5"
               >
                 How It Works
-              </Link>
+              </a>
             </div>
 
             {/* Social proof */}
@@ -56,7 +55,7 @@ export function Hero() {
                 {[1, 2, 3, 4].map((i) => (
                   <div
                     key={i}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-background bg-primary text-xs font-bold text-primary-foreground"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-cream bg-green-mid text-xs font-bold text-primary-foreground"
                   >
                     {String.fromCharCode(64 + i)}
                   </div>
@@ -67,12 +66,12 @@ export function Hero() {
                   {[1, 2, 3, 4, 5].map((i) => (
                     <Star
                       key={i}
-                      className="h-4 w-4 fill-primary text-primary"
+                      className="h-4 w-4 fill-accent text-accent"
                     />
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Trusted by <span className="font-semibold text-foreground">2,000+</span> happy customers
+                  Trusted by <span className="font-semibold text-primary">2,000+</span> happy customers
                 </p>
               </div>
             </div>
@@ -80,7 +79,7 @@ export function Hero() {
 
           {/* Hero Image */}
           <div className="relative">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-xl lg:rounded-2xl border border-border">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl lg:rounded-3xl">
               <Image
                 src="/images/hero.jpg"
                 alt="Nigerian man and woman in premium traditional attire - agbada and ankara gown"
@@ -89,15 +88,17 @@ export function Hero() {
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
+              {/* Overlay accent border */}
+              <div className="absolute inset-0 rounded-2xl lg:rounded-3xl ring-1 ring-inset ring-primary/10" />
             </div>
 
             {/* Floating badge */}
-            <div className="absolute -bottom-4 -left-4 rounded-xl bg-card border border-border p-4 sm:p-5">
+            <div className="absolute -bottom-4 -left-4 rounded-xl bg-card p-4 shadow-xl sm:p-5">
               <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Made to Measure</p>
-              <p className="mt-1 text-2xl font-bold text-primary font-serif">
+              <p className="mt-1 text-2xl font-bold text-primary font-[family-name:var(--font-playfair)]">
                 100%
               </p>
-              <p className="text-sm font-medium text-foreground">Custom Fit</p>
+              <p className="text-sm font-medium text-accent">Custom Fit</p>
             </div>
           </div>
         </div>
